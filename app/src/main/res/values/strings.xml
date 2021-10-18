@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">pertemuan3_navigation</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="navigation_dan_action_bar">Navigation dan Action Bar</string>
+    <string name="praktikum_mobile_programming_1918123">Praktikum Mobile Programming // 1918123</string>
+    <string name="logo">Logo</string>
+</resources>
