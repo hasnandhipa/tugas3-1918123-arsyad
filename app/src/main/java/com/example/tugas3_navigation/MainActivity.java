@@ -1,4 +1,4 @@
-package com.example.pertemuan3_navigation;
+package com.example.tugas3_navigation;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,42 +19,42 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //mengganti actionbar dengan toolbar
+        //Memanggil Action Bar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //memanggil drawer_layout dari activity_main.xml
+        //Memanggil drawer_layout dari activity_main.xml
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView =
                 findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        //membuat hamburger icon pada toolbar dan animasinya
+        //Hamburger Icon
         ActionBarDrawerToggle toggle = new
                 ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        //membuat default navigation menu select
+        //Default Navigation ke menu Photo
         if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_message);}
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PhotoFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_photo);}
     }
     //drawer menu fragment handler
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem
                                                     item) {
         switch (item.getItemId()){
-            case R.id.nav_message:
+            case R.id.nav_photo:
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PhotoFragment()).commit();
                 break;
-            case R.id.nav_chat:
+            case R.id.nav_portrait:
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChatFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PortraitFragment()).commit();
                 break;
-            case R.id.nav_profile:
+            case R.id.nav_landscape:
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LandscapeFragment()).commit();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

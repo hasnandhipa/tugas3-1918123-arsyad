@@ -1,4 +1,4 @@
-package com.example.pertemuan3_navigation;
+package com.example.tugas3_navigation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,13 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class ChatFragment extends Fragment{
+public class PortraitFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle
                                      savedInstanceState) {
         return
-                inflater.inflate(R.layout.fragment_chat,container,false);
+                inflater.inflate(R.layout.fragment_portrait,container,false);
     }
 }
